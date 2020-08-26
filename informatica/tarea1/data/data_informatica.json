@@ -1,0 +1,144 @@
+{
+    "meta": {
+        "name": "informatica y sus relaciones",
+        "author": "danyjavierb@gmail.com",
+        "version": "0.1"
+    },
+    "format": "node_array",
+    "data": [
+        {
+            "id": "root",
+            "topic": "INFORMATICA",
+            "expanded": true,
+            "isroot": true,
+            "font-size": 28,
+            "foreground-color": "#000"
+        },
+        {
+            "id": "427dede4c6040bc1",
+            "topic": "disciplina biologica",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "left"
+        },
+        {
+            "id": "427eb526299e5a60",
+            "topic": "Biologia",
+            "expanded": true,
+            "parentid": "427dede4c6040bc1"
+        },
+        {
+            "id": "427ec56aed14a302",
+            "topic": "BioIngenieria",
+            "expanded": true,
+            "parentid": "427dede4c6040bc1"
+        },
+        {
+            "id": "427eb8400d5959d8",
+            "topic": "Quimica",
+            "expanded": true,
+            "parentid": "427dede4c6040bc1"
+        },
+        {
+            "id": "427ebacde322d43a",
+            "topic": "Fisica",
+            "expanded": true,
+            "parentid": "427dede4c6040bc1"
+        },
+        {
+            "id": "easy",
+            "topic": "disciplina cognoscitiva",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "left"
+        },
+        {
+            "id": "427e9510c60e6487",
+            "topic": "Psicologia",
+            "expanded": true,
+            "parentid": "easy"
+        },
+        {
+            "id": "427e9ed5fbbdef02",
+            "topic": "IA",
+            "expanded": true,
+            "parentid": "easy"
+        },
+        {
+            "id": "427ead0376a5d3af",
+            "topic": "Epistemología",
+            "expanded": true,
+            "parentid": "easy"
+        },
+        {
+            "id": "open",
+            "topic": " disciplina cientifica",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "right"
+        },
+        {
+            "id": "427e2c8713f0ba7e",
+            "topic": "cibernetica",
+            "expanded": true,
+            "parentid": "open"
+        },
+        {
+            "id": "427e4c191dc280d4",
+            "topic": "matematica",
+            "expanded": true,
+            "parentid": "open"
+        },
+        {
+            "id": "powerful",
+            "topic": " disciplina  tecnologica",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "right"
+        },
+        {
+            "id": "427e6be35d92d7b6",
+            "topic": "Sistemas de Informacion",
+            "expanded": true,
+            "parentid": "powerful"
+        },
+        {
+            "id": "427e6ede18efa7de",
+            "topic": "Ingeniería de Software",
+            "expanded": true,
+            "parentid": "powerful"
+        },
+        {
+            "id": "other",
+            "topic": " disciplina cientifico-tecnologica",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "left"
+        },
+        {
+            "id": "427e81fcb97aee1f",
+            "topic": "Teoria de las organizaciones",
+            "expanded": true,
+            "parentid": "other"
+        },
+        {
+            "id": "427e8b3976a32f5a",
+            "topic": "Economia",
+            "expanded": true,
+            "parentid": "other"
+        },
+        {
+            "id": "427dfadc23def629",
+            "topic": "disciplina social",
+            "expanded": true,
+            "parentid": "root",
+            "direction": "left"
+        },
+        {
+            "id": "427ecfebd488dfbd",
+            "topic": "sociologia ",
+            "expanded": true,
+            "parentid": "427dfadc23def629"
+        }
+    ]
+}
