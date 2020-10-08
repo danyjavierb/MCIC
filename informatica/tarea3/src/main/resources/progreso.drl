@@ -1,0 +1,57 @@
+package com.danyjavierb.droolsfunctional
+
+import com.danyjavierb.droolsfunctional.domain.materias.Materia;
+import com.danyjavierb.droolsfunctional.domain.materias.Progreso;
+import com.danyjavierb.droolsfunctional.domain.materias.ResponseProgreso;
+
+ enabled true
+
+dialect  "mvel"
+
+rule "Promedio por materia"
+salience 1
+    when
+      $m : Materia(promedio == null)
+      $promedio : Number() from accumulate( $n:Number( intValue > 0 ) from $m.notas,
+                                                         sum( $n ) )
+
+    then
+    System.out.println($m);
+   $m.promedio = $promedio;
+
+end
+
+rule "Promedio perfecto"
+    when
+      $m : Materia( promedio==5, promedio!=null)
+    then
+   insert(new ResponseProgreso($m.nombre,Progreso.PERFECTO, $m.promedio))
+
+end
+
+rule "Promedio malo"
+
+    when
+      $m : Materia( promedio<3, promedio>=0, promedio!=null)
+    then
+   insert(new ResponseProgreso($m.nombre,Progreso.MALO,$m.promedio))
+
+end
+
+rule "Promedio regular"
+
+    when
+      $m : Materia( promedio<4, promedio>=3, promedio!=null)
+    then
+   insert(new ResponseProgreso($m.nombre,Progreso.REGULAR,$m.promedio))
+
+end
+
+rule "Promedio bueno"
+
+    when
+      $m : Materia( promedio<5, promedio>=4, promedio!=null)
+    then
+   insert(new ResponseProgreso($m.nombre,Progreso.BUENO,$m.promedio))
+
+end

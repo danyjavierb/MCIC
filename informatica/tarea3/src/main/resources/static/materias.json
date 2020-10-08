@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nombre": "seminario",
+    "notas": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 1,
+    "nombre": "informatica",
+    "notas": [
+      4,
+      5,
+      4,
+      5,
+      4
+    ]
+  }
+]
