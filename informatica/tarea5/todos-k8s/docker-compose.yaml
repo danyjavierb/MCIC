@@ -1,0 +1,33 @@
+version: '3.7'
+
+volumes:
+  mongo-db:
+
+networks:
+  internalNet:
+    external: false
+    name: 'internalNet'
+
+services:
+
+  mongodb:
+    image: mongo:4.2
+    restart: always
+    networks:
+      - internatNet
+    volumes:
+     - mongo-db:/data/db
+
+  todos-service:
+    build:
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    restart: always
+    networks:
+      - internalNet
+    environment:
+      MONGO_URL: 'mongodb://mongodb:27017/todos'
+    ports:
+      - 8080:3000
+

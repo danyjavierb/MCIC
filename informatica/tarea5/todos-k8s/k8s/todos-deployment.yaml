@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todos-app
+  name: todos-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todos-pod
+  template:
+    metadata:
+      labels:
+        app: todos-pod
+    spec:
+      containers:
+      - name: todos
+        env:
+        - name: MONGO_URL
+          value: mongodb://mongodb-service:27017/todos
+        resources: {}
+        image: danyjavierb/todos:final
+        ports:
+        - containerPort: 3000
+      restartPolicy: Always

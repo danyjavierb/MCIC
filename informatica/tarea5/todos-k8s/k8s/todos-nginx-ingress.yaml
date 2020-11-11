@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: todos-ingress
+spec:
+  rules:
+  - host: todos.local
+    http:
+      paths:
+      - backend:
+          serviceName: todos-service
+          servicePort: 8081
